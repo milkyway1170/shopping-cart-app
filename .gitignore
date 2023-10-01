@@ -36,3 +36,6 @@
 
 *.enc
 */database.yml
+
+# dependencies
+/node_modules
