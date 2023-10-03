@@ -1,0 +1,18 @@
+<div id="<%= dom_id product %>">
+  <p>
+    <strong>Title:</strong>
+    <%= product.title %>
+  </p>
+  <p>
+    <strong>Description:</strong>
+    <%= product.description %>
+  </p>
+  <p class="image">
+    <strong>Image url:</strong>
+    <%= image_tag(product.image_url, class: 'lis t_image') %>
+  </p>
+  <p>
+    <strong>Price:</strong>
+    <%= product.price %>
+  </p>
+</div>
