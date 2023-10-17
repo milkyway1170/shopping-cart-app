@@ -1,8 +1,8 @@
 Product.delete_all
 # . . .
 Product.create!(title: 'Build Chatbot Interactions',
-description:
-%{<p>
+                description:
+%(<p>
 <em>Responsive, Intuitive Interfaces with Ruby</em>
 The next step in the evolution of user interfaces is here.
 Chatbots let your users interact with your service in their
@@ -10,15 +10,15 @@ own natural language. Use free and open source tools along
 with Ruby to build creative, useful, and unexpected interactions
 for users. Take advantage of the Lita framework’s step-by-step
 implementation strategy to simplify bot development and testing.
-From novices to experts, chatbots are an area in which everyone  
+From novices to experts, chatbots are an area in which everyone
 can participate. Exercise your creativity by creating chatbot
 skills for communicating, information, and fun.
-</p>},
-image_url: 'cat0.jpg', 
-price: 20.00)
+</p>),
+                image_url: 'https://aroundpet.ru/wp-content/uploads/kak-vidyat-koty-6-1170x767.jpg',
+                price: 20.00)
 Product.create!(title: 'Build2 Chatbot Interactions',
-description:
-%{<p>
+                description:
+%(<p>
 <em>213123123123Responsive, Intuitive Interfaces with Ruby</em>
 The next step in the evolution of user interfaces is here.
 Chatbots let your users interact with your service in their
@@ -29,7 +29,7 @@ implementation strategy to simplify bot development and testing.
 From novices to experts, chatbots are an area in which everyone
 can participate. Exercise your creativity by creating chatbot
 skills for communicating, information, and fun.
-</p>},
-image_url: 'cat1.jpg',
-price: 20.00) 
+</p>),
+                image_url: 'https://kulturologia.ru/files/u18476/maine-coon-cat-20.jpg',
+                price: 20.00)
 # . . .
