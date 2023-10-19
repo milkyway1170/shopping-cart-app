@@ -1,7 +1,7 @@
 <p style="color: green"><%= notice %></p>
 <h1>Carts</h1>
 <div id="carts">
-  <% @carts.each do |cart| %>
+  <% @carts.find_each do |cart| %>
     <%= render cart %>
     <p>
       <%= link_to "Show this cart", cart %>
