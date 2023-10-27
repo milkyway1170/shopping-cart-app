@@ -21,8 +21,6 @@ class LineItemsController < ApplicationController
 
   # POST /line_items or /line_items.json
   def create
-    print "\n\n create \n\n"
-
     product = Product.find(params[:product_id])
     @line_item = @cart.add_product(product)
 
