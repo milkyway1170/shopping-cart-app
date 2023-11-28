@@ -1,9 +1,10 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: %i[show edit update destroy]
+  before_action :find_products, only: %i[index update]
 
   # GET /products or /products.json
   def index
-    @products = Product.all.order(:title)
+    @products
   end
 
   # GET /products/1 or /products/1.json
@@ -39,8 +40,6 @@ class ProductsController < ApplicationController
       if @product.update(product_params)
         format.html { redirect_to product_url(@product), notice: 'Product was successfully updated.' }
         format.json { render :show, status: :ok, location: @product }
-
-        @products = Product.all.order(:title)
         ActionCable.server.broadcast 'products', html: render_to_string('store/index', layout: false)
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -64,6 +63,10 @@ class ProductsController < ApplicationController
   # Use callbacks to share common setup or constraints between actions.
   def set_product
     @product = Product.find(params[:id])
+  end
+
+  def find_products
+    @products = Product.all.order(:title)
   end
 
   # Only allow a list of trusted parameters through.
