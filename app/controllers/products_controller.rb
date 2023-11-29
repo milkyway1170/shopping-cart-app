@@ -3,9 +3,7 @@ class ProductsController < ApplicationController
   before_action :find_products, only: %i[index update]
 
   # GET /products or /products.json
-  def index
-    @products
-  end
+  def index; end
 
   # GET /products/1 or /products/1.json
   def show; end
