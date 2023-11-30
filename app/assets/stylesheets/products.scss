@@ -21,12 +21,8 @@
    }
 
    td.image {
-     // Hide this on mobile devices
      display: none;
 
-     // Assume anything bigger than 30em
-     // is a non-mobile device and can
-     // fit the image.
      @media (min-width: 30em) {
        display: block;
 
