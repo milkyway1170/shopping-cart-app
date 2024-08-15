@@ -7,6 +7,9 @@
     <%= stylesheet_link_tag 'application', 'store' , 'carts', 'line_items', 'products', 'orders', media: 'all',
 'data-turbolinks-track': 'reload' %>
     <%= javascript_importmap_tags %>
+    <%= javascript_pack_tag "application" %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
     <header class="main">
